@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MD Logeshwaran Online Service Center</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #172033;
+}
+
+header {
+    background: #12336b;
+    color: white;
+    padding: 28px 16px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 24px;
+}
+
+header p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 650px;
+    margin: 22px auto;
+    padding: 0 14px;
+}
+
+.box {
+    background: white;
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: 0 3px 15px #00000010;
+}
+
+h2 {
+    color: #12336b;
+    font-size: 21px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    background: white;
+}
+
+textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background: #167447;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.info {
+    margin-top: 15px;
+    padding: 12px;
+    background: #eff6ff;
+    color: #1e40af;
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+footer {
+    text-align: center;
+    padding: 22px 12px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.hidden {
+    display: none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>MD LOGESHWARAN</h1>
+    <p>ONLINE SERVICE CENTER</p>
+    <p>உங்களுக்குத் தேவையான ஆன்லைன் சேவைக்கு இங்கே விண்ணப்பிக்கவும்.</p>
+</header>
+
+<div class="container">
+<div class="box">
+
+<h2>வாடிக்கையாளர் விண்ணப்பப் படிவம்</h2>
+
+<p>
+உங்களுக்குத் தேவையான சேவையைத் தேர்ந்தெடுத்து,
+உங்கள் விவரங்களைப் பதிவு செய்யுங்கள்.
+</p>
+
+<form id="serviceForm">
+
+<label for="name">உங்கள் பெயர் *</label>
+<input id="name" name="name"
+       type="text" maxlength="100"
+       autocomplete="name" required
+       placeholder="உங்கள் பெயரை உள்ளிடவும்">
+
+<label for="phone">மொபைல் நம்பர் *</label>
+<input id="phone" name="phone"
+       type="tel" inputmode="numeric"
+       pattern="[0-9]{10}"
+       maxlength="10" required
+       placeholder="10 இலக்க மொபைல் நம்பர்">
+
+<label for="service">என்ன சேவை தேவை? *</label>
+<select id="service" name="service" required>
+    <option value="">சேவையைத் தேர்ந்தெடுக்கவும்</option>
+    <option value="Aadhaar Service">ஆதார் சேவை</option>
+    <option value="Ration Card Service">ரேஷன் கார்டு சேவை</option>
+    <option value="PAN Card Service">PAN கார்டு சேவை</option>
+    <option value="TNeGA Certificate">TNeGA சான்றிதழ்கள்</option>
+    <option value="PF Service">PF சேவை</option>
+    <option value="RC Service">RC தொடர்பான சேவை</option>
+    <option value="Driving Licence Download">Driving Licence Download</option>
+    <option value="Other Online Service">மற்ற ஆன்லைன் சேவைகள்</option>
+</select>
+
+<label for="work">என்ன வேலை செய்ய வேண்டும்? *</label>
+<textarea id="work" name="work"
+          maxlength="1000" required
+          placeholder="உதாரணம்: ஆதாரில் முகவரி மாற்ற வேண்டும்"></textarea>
+
+<label for="documents">என்ன
